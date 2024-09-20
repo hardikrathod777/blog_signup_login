@@ -123,7 +123,7 @@ input[type=button]:active, input[type=submit]:active, input[type=reset]:active  
   transform: scale(0.95);
 }
 
-input[type=text] {
+input {
   background-color: #f6f6f6;
   border: none;
   color: #0d0d0d;
@@ -144,12 +144,12 @@ input[type=text] {
   border-radius: 5px 5px 5px 5px;
 }
 
-input[type=text]:focus {
+input:focus {
   background-color: #fff;
   border-bottom: 2px solid #5fbae9;
 }
 
-input[type=text]:placeholder {
+input:placeholder {
   color: #cccccc;
 }
 
@@ -272,6 +272,10 @@ input[type=text]:placeholder {
 * {
   box-sizing: border-box;
 }
+a{
+  text-decoration: none;
+  color: #000;
+}
     </style>
 </head>
 <body>
@@ -279,18 +283,14 @@ input[type=text]:placeholder {
         <div id="formContent">
           <!-- Tabs Titles -->
           <h2 class="active"> Sign In </h2>
-          <h2 class="inactive underlineHover">Sign Up </h2>
+          <h2 class="inactive underlineHover"><a href="/register">Sign Up</a> </h2>
+       <form action="/login" method="POST">
+        <input type="text" id="login" class="fadeIn second" name="email" placeholder="Email">
+        <input type="password" id="password" class="fadeIn third" name="password" placeholder="Password">
+        <input type="submit" class="fadeIn fourth" value="Log In">
+      </form>
       
-          <!-- Icon -->
-          
-      
-          <!-- Login Form -->
-          <form>
-            <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-            <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
-            <input type="submit" class="fadeIn fourth" value="Log In">
-          </form>
-      
+    
           <!-- Remind Passowrd -->
           <div id="formFooter">
             <a class="underlineHover" href="#">Forgot Password?</a>

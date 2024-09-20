@@ -2,7 +2,7 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const connectDB = require('./config/db');
 const authRoutes = require('./routes/auth');
-
+const path = require('path');
 const app = express();
 
 // Connect to the database
@@ -14,6 +14,10 @@ app.use(cookieParser());
 
 // Set EJS as templating engine
 app.set('view engine', 'ejs');
+
+app.set('views', path.join(__dirname, 'views'));
+app.use(express.static(path.join(__dirname, 'views')));
+
 
 // Routes
 app.use('/', authRoutes);
