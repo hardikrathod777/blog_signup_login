@@ -55,5 +55,4 @@ This project is designed to provide an intuitive admin panel where users can reg
 
  - Visit **http://localhost:3000** in your browser.
 
-  ![Admin Dashboard Screenshot](./views/images/logo(1).jpg)
 
